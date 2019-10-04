@@ -5,16 +5,6 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    }
     <style> body {
         background: url("https://cdn.pixabay.com/photo/2016/06/14/10/58/guestbook-1456264_960_720.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -23,18 +13,33 @@
         background-size: cover;
     }
     </style>
-<!--    <style>-->
-<!--        html {-->
-<!--            background-image: url("https://cdn.pixabay.com/photo/2016/06/14/10/58/guestbook-1456264_960_720.jpg");-->
-<!--            background-color: #cccccc;-->
-<!--        }-->
-<!--    </style>-->
+    <style>
+        /* unvisited link */
+        a:link {
+            color: midnightblue;
+        }
+
+        /* visited link */
+        a:visited {
+            color: purple;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: ghostwhite;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <!--navigation bar-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="/">My Guestbook</a>
+    <a class="navbar-brand" href="/">Guestbook</a>
 
     <!-- Links -->
     <ul class="navbar-nav">
@@ -42,7 +47,7 @@
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/posts">Posts</a>
+            <a class="nav-link" href="/">All Posts</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
@@ -50,27 +55,28 @@
     </ul>
 </nav>
 <!--navigation bar-->
-<h1 class="text-center"><b>Meet the Author!</b></h1>
+<h1 class="text-center"><b>Meet Jane!</b></h1>
 <div class="card-transparent">
     <div class="blog">
         <div class="container">
 <!--                    <h1 class="text-center">Blog</h1>-->
             <div class="row">
 
-                <div class="col-md-3 col-lg-9 col-sm-12">
+                <div class="col-md-3 col-lg-9 col-sm-6">
                     <div class="card">
                         <div class="card-img">
                             <img class="card-img-top" src="https://live.staticflickr.com/1694/25798197945_3edd2e4cea_b.jpg" alt="" >
                             <div class="card-body">
-                                <h4 class="card-title">Jane Doe</h4>
+                                <h4 class="card-title">Jane Doe, PhD</h4>
                                 <p class="card-text"><b>Brief Bio:</b> Dr. Jane Doe latest book "Java for Dummies" has been on the bestseller list under the technology category for 5 years.
                                     She is a PhD Harvard graduate of the class of 2012 with the thesis entitled, "Java: a meditation on stamina, memory, and pure insanity. How has Java lasted this long?"
-                                    Currently she resides in San Francisco, CA with her pet fish, Pete and cat, Simon.</p>
+                                    Currently she resides in San Francisco, CA with her pet fish, Pete and cat, Simon. She is undergoing experimental immunotherapy for lung cancer and would greatly appreciate your well-wishes.</p>
                             </div>
                             <div class="card-body">
                                 <a href="#" class="fa fa-facebook">  facebook.com/Jane_Doe</a><br>
                                 <a href="#" class="fa fa-twitter">  twitter.com/Jane_Doe</a><br>
-                                <a href="/add">Add a Wish for Jane</a><br />
+                                <button style='font-size:20px'>Donate <i class='fas fa-donate'></i></button><a href="https://www.cancerresearch.org/join-the-cause/donate/one-time-donation">Cancer Research Institute</a><br>
+                                <a href="/add"><button style='font-size:20px'><i class="fa fa-home"></i> Make a Wish</button></a><br />
 
 
                             </div>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. Doe's Guestbook Home</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style> body {
+        background: url("https://yourradioplace.com/wp-content/uploads/2019/02/Lung-Screen-Image.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+    <style>
+        /* unvisited link */
+        a:link {
+            color: midnightblue;
+        }
+
+        /* visited link */
+        a:visited {
+            color: purple;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: ghostwhite;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<!--navigation bar-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="/">Guestbook</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/">All Posts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+    </ul>
+</nav>
+<!--navigation bar-->
+
+<h2 align="center">Welcome to Dr. Doe's Personal Page</h2>
+<p>
+    Dr. Jane Doe is certainly a lot more than her cancer. She is very active as a mentor as a youth IT instructor at the Boys' and Girls' Club.
+    She upcycles thrifted garments into children's clothes and stylish outfits for herself. Dr. Doe has an active speech schedule that has taken her
+    to Egypt, Japan, China, and across the U.S.A. In the summer she enjoys an active adult kickball league outdoors and retreats inside during the winter
+    with volleyball. Catch her at the latest art gallery or movie premiere in the meantime.
+    <br>
+    Dr. Doe is able to remain active in these activities through the new immunotherapies for liver cancer. She invites you to help her continue her
+    life's journey through well-wishes and a generous donation to the research keeping her thriving.
+    <button style='font-size:20px'>Donate <i class='fas fa-donate'></i></button><a href="https://www.cancerresearch.org/join-the-cause/donate/one-time-donation">Cancer Research Institute</a><br>
+    <a href="/add"><button style='font-size:20px'><i class="fa fa-home"></i> Make a Wish</button></a><br />
+</p>

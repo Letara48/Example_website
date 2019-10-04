@@ -15,7 +15,7 @@ public class Book {
     private long id;
 
     @NotNull
-    @Size(min=4)
+    @Size(min=3)
     private String name;
 
     @NotNull

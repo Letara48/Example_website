@@ -41,12 +41,6 @@ public class HomeController {
         return "about";
     }
 
-    @RequestMapping("/posts")
-    public String posts(){
-        return "posts";
-    }
-
-
     @RequestMapping("/details/{id}")
     public String showBook(@PathVariable("id") long id, Model model)
     {

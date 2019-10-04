@@ -11,13 +11,67 @@
         -o-background-size: cover;
         background-size: cover;
     }
+
+        input[type=text], select {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            background-color: #aeb3aa;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #5125cc;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+    </style>
+    <style>
+        /* unvisited link */
+        a:link {
+            color: midnightblue;
+        }
+
+        /* visited link */
+        a:visited {
+            color: purple;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: ghostwhite;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
     </style>
 </head>
 <body>
 <!--navigation bar-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="/">My Guestbook</a>
+    <a class="navbar-brand" href="/">Guestbook</a>
 
     <!-- Links -->
     <ul class="navbar-nav">
@@ -25,7 +79,7 @@
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/posts">Posts</a>
+            <a class="nav-link" href="/">All Posts</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
@@ -34,19 +88,29 @@
 </nav>
 <!--navigation bar-->
 
-<h1>Guestbook</h1>
-<form action="#" th:action="@{/process}" th:object="${book}" method="post">
-    Name:      <input type="text" th:field="*{name}" />
+<h1 align="center">Guestbook</h1><br><br>
+    <h4 align="center"><i><b>Please make a wish in the guestbook!</b></i></h4><br>
+
+<form action="#" th:action="@{/process}" th:object="${book}" method="post" th:align="center">
+    <b>Name     :</b>      <input type="text" th:field="*{name}" />
     <span th:if="${#fields.hasErrors('name')}"
           th:errors="*{name}"></span><br />
-    Date:      <input type="text" th:field="*{date}" />
+    <b>Date     :</b>      <input type="date" th:field="*{date}" />
     <span th:if="${#fields.hasErrors('date')}"
           th:errors="*{date}"></span><br />
-    Wishes:      <textarea rows="3" th:field="*{wishes}" />
+    <b>Wishes   :</b>     <input type="text" th:field="*{wishes}" />
     <span th:if="${#fields.hasErrors('wishes')}"
           th:errors="*{wishes}"></span><br />
-    <input type="submit" value="Submit" />
+    <br />
+    <input type="submit" value="Submit a Wish" />
+
 </form>
+<br>
+<br>
+<h2 align="center">Donate to Cancer Research Below</h2>
+<p align="center"><a href="https://www.cancerresearch.org/join-the-cause/donate/one-time-donation"><button style='font-size:20px'>Donate <i class='fas fa-donate'></i></button>Cancer Research Institute</a><br></p>
+
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
