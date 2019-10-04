@@ -28,6 +28,11 @@ public class HomeController {
         return "bookform";
     }
 
+    @RequestMapping("/home")
+    public String homeslice(){
+        return "home";
+    }
+
     @PostMapping("/process")
     public String processForm(@Valid Book book, BindingResult result) {
         if (result.hasErrors()) {
